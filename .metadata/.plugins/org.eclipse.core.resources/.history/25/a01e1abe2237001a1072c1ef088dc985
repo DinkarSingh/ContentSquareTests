@@ -1,0 +1,81 @@
+package testStep;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.PageFactory;
+import static org.junit.Assert.assertEquals;				
+import static org.junit.Assert.assertFalse;				
+
+import java.util.ArrayList;		
+
+import org.junit.After;		
+import org.junit.AfterClass;		
+import org.junit.Before;		
+import org.junit.BeforeClass;		
+import org.junit.Ignore;		
+import org.junit.Test;		
+
+import page.HomePage;
+
+public class StepHomePage {
+
+	static String browser;
+	static WebDriver driver;
+	static HomePage objHomepage;
+
+	/*public static void main(String[] args) {
+		setBrowser();
+		setBrowserConfig();
+		RunTests();
+		Homepagedisplay();
+
+	}*/
+
+	public static void setBrowser(){
+		browser = "Chrome";
+
+	}
+
+	public static void setBrowserConfig(){
+		String projectLocation = System.getProperty("user.dir");
+
+		if(browser.contains("Firefox")){
+			System.setProperty("webdriver.gecko.driver","D:\\ContentSquare\\TestContentSquare\\lib\\firefoxdriver\\geckodriver.exe");
+			System.setProperty("webdriver.firefox.bin", "C:\\Program Files (x86)\\Mozilla Firefox");
+			driver = new FirefoxDriver();
+		}
+		if(browser.contains("Chrome")){
+			System.setProperty("webdriver.chrome.driver", projectLocation+"\\lib\\chromedriver\\chromedriver.exe");
+			driver = new ChromeDriver();
+		}
+
+	}
+
+	public static void OpenBrowserULR(){
+		driver.get("https://marksandspicy.com/");
+		driver.manage().window().maximize();
+
+	}
+	
+	@Before
+	public void setup(){
+		setBrowser();
+		setBrowserConfig();
+		OpenBrowserULR();
+		
+	}
+	
+	@Test
+	public void FirstTestCase(){
+		objHomepage = new HomePage(driver);
+		objHomepage.ClickOnSignInButtn();
+		//driver.quit();
+	}
+	
+	@After
+	public void close(){
+		driver.quit();
+	}
+
+}

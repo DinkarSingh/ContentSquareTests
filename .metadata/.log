@@ -1,0 +1,442 @@
+!SESSION 2020-01-14 15:13:12.779 -----------------------------------------------
+eclipse.buildId=4.6.3.M20170301-0400
+java.version=1.8.0_211
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2020-01-14 15:13:58.540
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Dinkar_Singh'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 17 2020-01-14 15:14:03.242
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1. ; version: 2.0.4.v20170307-1435
+!STACK 0
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:176)
+	at com.google.gson.Gson.fromJson(Gson.java:803)
+	at com.google.gson.Gson.fromJson(Gson.java:768)
+	at com.google.gson.Gson.fromJson(Gson.java:717)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.json.Json.deserialize(Json.java:93)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:70)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:124)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:374)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:165)
+	... 9 more
+
+!ENTRY org.eclipse.recommenders.models.rcp 1 0 2020-01-14 15:27:54.355
+!MESSAGE org.eclipse.recommenders:index::zip:0.0.0 could not be resolved from the model repositories. Are you offline?
+
+!ENTRY org.eclipse.equinox.p2.operations 4 10053 2020-01-14 18:11:46.905
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 1 10001 2020-01-14 18:11:46.905
+!MESSAGE Your original request has been modified.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2020-01-14 18:11:46.905
+!MESSAGE "m2e - slf4j over logback logging (Optional)" is already installed, so an update will be performed instead.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2020-01-14 18:11:46.905
+!MESSAGE "m2e - Maven Integration for Eclipse (includes Incubating components)" is already installed, so an update will be performed instead.
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10053 2020-01-14 18:11:46.905
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2020-01-14 18:11:46.905
+!MESSAGE Software being installed: m2e - slf4j over logback logging (Optional) 1.14.0.20191209-1925 (org.eclipse.m2e.logback.feature.feature.group 1.14.0.20191209-1925)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2020-01-14 18:11:46.905
+!MESSAGE Missing requirement: Maven Integration for Eclipse 1.13.0.20190716-1624 (org.eclipse.m2e.core 1.13.0.20190716-1624) requires 'bundle com.google.guava [27.1.0,28.0.0)' but it could not be found
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2020-01-14 18:11:46.905
+!MESSAGE Missing requirement: Maven Integration for Eclipse 1.14.0.20191209-1925 (org.eclipse.m2e.core 1.14.0.20191209-1925) requires 'bundle com.google.guava [27.1.0,28.0.0)' but it could not be found
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2020-01-14 18:11:46.905
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-01-14 18:11:46.905
+!MESSAGE From: Maven Integration for Eclipse 1.13.0.20190716-1624 (org.eclipse.m2e.core.ui 1.13.0.20190716-1624)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-01-14 18:11:46.905
+!MESSAGE To: bundle org.eclipse.m2e.core [1.13.0,1.14.0)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2020-01-14 18:11:46.905
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-01-14 18:11:46.905
+!MESSAGE From: Maven Integration for Eclipse 1.14.0.20191209-1925 (org.eclipse.m2e.core.ui 1.14.0.20191209-1925)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-01-14 18:11:46.905
+!MESSAGE To: bundle org.eclipse.m2e.core [1.13.0,1.14.1)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2020-01-14 18:11:46.905
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-01-14 18:11:46.905
+!MESSAGE From: m2e logback appender 1.14.0.20191209-1925 (org.eclipse.m2e.logback.appender 1.14.0.20191209-1925)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-01-14 18:11:46.905
+!MESSAGE To: bundle org.eclipse.m2e.core.ui [1.13.0,1.14.1)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2020-01-14 18:11:46.905
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-01-14 18:11:46.905
+!MESSAGE From: m2e - slf4j over logback logging (Optional) 1.14.0.20191209-1925 (org.eclipse.m2e.logback.feature.feature.group 1.14.0.20191209-1925)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-01-14 18:11:46.905
+!MESSAGE To: org.eclipse.m2e.logback.appender [1.14.0.20191209-1925]
+
+!ENTRY org.eclipse.equinox.p2.operations 4 10053 2020-01-14 18:11:47.329
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 1 10001 2020-01-14 18:11:47.330
+!MESSAGE Your original request has been modified.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2020-01-14 18:11:47.330
+!MESSAGE "m2e - slf4j over logback logging (Optional)" is already installed, so an update will be performed instead.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2020-01-14 18:11:47.330
+!MESSAGE "m2e - Maven Integration for Eclipse (includes Incubating components)" is already installed, so an update will be performed instead.
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10053 2020-01-14 18:11:47.330
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2020-01-14 18:11:47.330
+!MESSAGE Software being installed: m2e - slf4j over logback logging (Optional) 1.14.0.20191209-1925 (org.eclipse.m2e.logback.feature.feature.group 1.14.0.20191209-1925)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2020-01-14 18:11:47.330
+!MESSAGE Missing requirement: Maven Integration for Eclipse 1.13.0.20190716-1624 (org.eclipse.m2e.core 1.13.0.20190716-1624) requires 'bundle com.google.guava [27.1.0,28.0.0)' but it could not be found
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2020-01-14 18:11:47.330
+!MESSAGE Missing requirement: Maven Integration for Eclipse 1.14.0.20191209-1925 (org.eclipse.m2e.core 1.14.0.20191209-1925) requires 'bundle com.google.guava [27.1.0,28.0.0)' but it could not be found
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2020-01-14 18:11:47.330
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-01-14 18:11:47.330
+!MESSAGE From: Maven Integration for Eclipse 1.13.0.20190716-1624 (org.eclipse.m2e.core.ui 1.13.0.20190716-1624)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-01-14 18:11:47.330
+!MESSAGE To: bundle org.eclipse.m2e.core [1.13.0,1.14.0)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2020-01-14 18:11:47.330
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-01-14 18:11:47.330
+!MESSAGE From: Maven Integration for Eclipse 1.14.0.20191209-1925 (org.eclipse.m2e.core.ui 1.14.0.20191209-1925)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-01-14 18:11:47.330
+!MESSAGE To: bundle org.eclipse.m2e.core [1.13.0,1.14.1)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2020-01-14 18:11:47.330
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-01-14 18:11:47.330
+!MESSAGE From: m2e logback appender 1.14.0.20191209-1925 (org.eclipse.m2e.logback.appender 1.14.0.20191209-1925)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-01-14 18:11:47.330
+!MESSAGE To: bundle org.eclipse.m2e.core.ui [1.13.0,1.14.1)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2020-01-14 18:11:47.330
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-01-14 18:11:47.330
+!MESSAGE From: m2e - slf4j over logback logging (Optional) 1.14.0.20191209-1925 (org.eclipse.m2e.logback.feature.feature.group 1.14.0.20191209-1925)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-01-14 18:11:47.330
+!MESSAGE To: org.eclipse.m2e.logback.appender [1.14.0.20191209-1925]
+
+!ENTRY org.eclipse.equinox.p2.operations 4 10053 2020-01-14 18:11:47.385
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 1 10001 2020-01-14 18:11:47.385
+!MESSAGE Your original request has been modified.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2020-01-14 18:11:47.385
+!MESSAGE "m2e - slf4j over logback logging (Optional)" is already installed, so an update will be performed instead.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2020-01-14 18:11:47.385
+!MESSAGE "m2e - Maven Integration for Eclipse (includes Incubating components)" is already installed, so an update will be performed instead.
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10053 2020-01-14 18:11:47.385
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2020-01-14 18:11:47.385
+!MESSAGE Software being installed: m2e - slf4j over logback logging (Optional) 1.14.0.20191209-1925 (org.eclipse.m2e.logback.feature.feature.group 1.14.0.20191209-1925)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2020-01-14 18:11:47.385
+!MESSAGE Missing requirement: Maven Integration for Eclipse 1.13.0.20190716-1624 (org.eclipse.m2e.core 1.13.0.20190716-1624) requires 'bundle com.google.guava [27.1.0,28.0.0)' but it could not be found
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2020-01-14 18:11:47.385
+!MESSAGE Missing requirement: Maven Integration for Eclipse 1.14.0.20191209-1925 (org.eclipse.m2e.core 1.14.0.20191209-1925) requires 'bundle com.google.guava [27.1.0,28.0.0)' but it could not be found
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2020-01-14 18:11:47.385
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-01-14 18:11:47.385
+!MESSAGE From: Maven Integration for Eclipse 1.13.0.20190716-1624 (org.eclipse.m2e.core.ui 1.13.0.20190716-1624)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-01-14 18:11:47.385
+!MESSAGE To: bundle org.eclipse.m2e.core [1.13.0,1.14.0)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2020-01-14 18:11:47.385
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-01-14 18:11:47.385
+!MESSAGE From: Maven Integration for Eclipse 1.14.0.20191209-1925 (org.eclipse.m2e.core.ui 1.14.0.20191209-1925)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-01-14 18:11:47.385
+!MESSAGE To: bundle org.eclipse.m2e.core [1.13.0,1.14.1)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2020-01-14 18:11:47.385
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-01-14 18:11:47.385
+!MESSAGE From: m2e logback appender 1.14.0.20191209-1925 (org.eclipse.m2e.logback.appender 1.14.0.20191209-1925)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-01-14 18:11:47.385
+!MESSAGE To: bundle org.eclipse.m2e.core.ui [1.13.0,1.14.1)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2020-01-14 18:11:47.385
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-01-14 18:11:47.385
+!MESSAGE From: m2e - slf4j over logback logging (Optional) 1.14.0.20191209-1925 (org.eclipse.m2e.logback.feature.feature.group 1.14.0.20191209-1925)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-01-14 18:11:47.385
+!MESSAGE To: org.eclipse.m2e.logback.appender [1.14.0.20191209-1925]
+
+!ENTRY org.eclipse.equinox.p2.operations 4 10053 2020-01-14 18:11:47.404
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 1 10001 2020-01-14 18:11:47.404
+!MESSAGE Your original request has been modified.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2020-01-14 18:11:47.404
+!MESSAGE "m2e - slf4j over logback logging (Optional)" is already installed, so an update will be performed instead.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2020-01-14 18:11:47.404
+!MESSAGE "m2e - Maven Integration for Eclipse (includes Incubating components)" is already installed, so an update will be performed instead.
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10053 2020-01-14 18:11:47.404
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2020-01-14 18:11:47.404
+!MESSAGE Software being installed: m2e - slf4j over logback logging (Optional) 1.14.0.20191209-1925 (org.eclipse.m2e.logback.feature.feature.group 1.14.0.20191209-1925)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2020-01-14 18:11:47.404
+!MESSAGE Missing requirement: Maven Integration for Eclipse 1.13.0.20190716-1624 (org.eclipse.m2e.core 1.13.0.20190716-1624) requires 'bundle com.google.guava [27.1.0,28.0.0)' but it could not be found
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2020-01-14 18:11:47.404
+!MESSAGE Missing requirement: Maven Integration for Eclipse 1.14.0.20191209-1925 (org.eclipse.m2e.core 1.14.0.20191209-1925) requires 'bundle com.google.guava [27.1.0,28.0.0)' but it could not be found
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2020-01-14 18:11:47.404
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-01-14 18:11:47.404
+!MESSAGE From: Maven Integration for Eclipse 1.13.0.20190716-1624 (org.eclipse.m2e.core.ui 1.13.0.20190716-1624)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-01-14 18:11:47.404
+!MESSAGE To: bundle org.eclipse.m2e.core [1.13.0,1.14.0)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2020-01-14 18:11:47.404
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-01-14 18:11:47.404
+!MESSAGE From: Maven Integration for Eclipse 1.14.0.20191209-1925 (org.eclipse.m2e.core.ui 1.14.0.20191209-1925)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-01-14 18:11:47.404
+!MESSAGE To: bundle org.eclipse.m2e.core [1.13.0,1.14.1)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2020-01-14 18:11:47.404
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-01-14 18:11:47.404
+!MESSAGE From: m2e logback appender 1.14.0.20191209-1925 (org.eclipse.m2e.logback.appender 1.14.0.20191209-1925)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-01-14 18:11:47.404
+!MESSAGE To: bundle org.eclipse.m2e.core.ui [1.13.0,1.14.1)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2020-01-14 18:11:47.405
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-01-14 18:11:47.405
+!MESSAGE From: m2e - slf4j over logback logging (Optional) 1.14.0.20191209-1925 (org.eclipse.m2e.logback.feature.feature.group 1.14.0.20191209-1925)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-01-14 18:11:47.405
+!MESSAGE To: org.eclipse.m2e.logback.appender [1.14.0.20191209-1925]
+
+!ENTRY org.eclipse.equinox.p2.operations 4 10053 2020-01-14 18:15:26.635
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 1 10001 2020-01-14 18:15:26.635
+!MESSAGE Your original request has been modified.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2020-01-14 18:15:26.635
+!MESSAGE "m2e - slf4j over logback logging (Optional)" is already installed, so an update will be performed instead.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2020-01-14 18:15:26.635
+!MESSAGE "m2e - Maven Integration for Eclipse (includes Incubating components)" is already installed, so an update will be performed instead.
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10053 2020-01-14 18:15:26.635
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2020-01-14 18:15:26.635
+!MESSAGE Software being installed: m2e - slf4j over logback logging (Optional) 1.14.0.20191209-1925 (org.eclipse.m2e.logback.feature.feature.group 1.14.0.20191209-1925)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2020-01-14 18:15:26.635
+!MESSAGE Missing requirement: Maven Integration for Eclipse 1.13.0.20190716-1624 (org.eclipse.m2e.core 1.13.0.20190716-1624) requires 'bundle com.google.guava [27.1.0,28.0.0)' but it could not be found
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2020-01-14 18:15:26.635
+!MESSAGE Missing requirement: Maven Integration for Eclipse 1.14.0.20191209-1925 (org.eclipse.m2e.core 1.14.0.20191209-1925) requires 'bundle com.google.guava [27.1.0,28.0.0)' but it could not be found
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2020-01-14 18:15:26.635
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-01-14 18:15:26.635
+!MESSAGE From: Maven Integration for Eclipse 1.13.0.20190716-1624 (org.eclipse.m2e.core.ui 1.13.0.20190716-1624)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-01-14 18:15:26.635
+!MESSAGE To: bundle org.eclipse.m2e.core [1.13.0,1.14.0)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2020-01-14 18:15:26.635
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-01-14 18:15:26.635
+!MESSAGE From: Maven Integration for Eclipse 1.14.0.20191209-1925 (org.eclipse.m2e.core.ui 1.14.0.20191209-1925)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-01-14 18:15:26.635
+!MESSAGE To: bundle org.eclipse.m2e.core [1.13.0,1.14.1)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2020-01-14 18:15:26.635
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-01-14 18:15:26.635
+!MESSAGE From: m2e logback appender 1.14.0.20191209-1925 (org.eclipse.m2e.logback.appender 1.14.0.20191209-1925)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-01-14 18:15:26.635
+!MESSAGE To: bundle org.eclipse.m2e.core.ui [1.13.0,1.14.1)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2020-01-14 18:15:26.635
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-01-14 18:15:26.635
+!MESSAGE From: m2e - slf4j over logback logging (Optional) 1.14.0.20191209-1925 (org.eclipse.m2e.logback.feature.feature.group 1.14.0.20191209-1925)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-01-14 18:15:26.635
+!MESSAGE To: org.eclipse.m2e.logback.appender [1.14.0.20191209-1925]
+
+!ENTRY org.eclipse.equinox.p2.operations 4 10053 2020-01-14 18:15:26.649
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 1 10001 2020-01-14 18:15:26.649
+!MESSAGE Your original request has been modified.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2020-01-14 18:15:26.649
+!MESSAGE "m2e - slf4j over logback logging (Optional)" is already installed, so an update will be performed instead.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2020-01-14 18:15:26.649
+!MESSAGE "m2e - Maven Integration for Eclipse (includes Incubating components)" is already installed, so an update will be performed instead.
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10053 2020-01-14 18:15:26.649
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2020-01-14 18:15:26.649
+!MESSAGE Software being installed: m2e - slf4j over logback logging (Optional) 1.14.0.20191209-1925 (org.eclipse.m2e.logback.feature.feature.group 1.14.0.20191209-1925)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2020-01-14 18:15:26.649
+!MESSAGE Missing requirement: Maven Integration for Eclipse 1.13.0.20190716-1624 (org.eclipse.m2e.core 1.13.0.20190716-1624) requires 'bundle com.google.guava [27.1.0,28.0.0)' but it could not be found
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2020-01-14 18:15:26.649
+!MESSAGE Missing requirement: Maven Integration for Eclipse 1.14.0.20191209-1925 (org.eclipse.m2e.core 1.14.0.20191209-1925) requires 'bundle com.google.guava [27.1.0,28.0.0)' but it could not be found
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2020-01-14 18:15:26.649
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-01-14 18:15:26.649
+!MESSAGE From: Maven Integration for Eclipse 1.13.0.20190716-1624 (org.eclipse.m2e.core.ui 1.13.0.20190716-1624)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-01-14 18:15:26.649
+!MESSAGE To: bundle org.eclipse.m2e.core [1.13.0,1.14.0)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2020-01-14 18:15:26.649
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-01-14 18:15:26.649
+!MESSAGE From: Maven Integration for Eclipse 1.14.0.20191209-1925 (org.eclipse.m2e.core.ui 1.14.0.20191209-1925)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-01-14 18:15:26.649
+!MESSAGE To: bundle org.eclipse.m2e.core [1.13.0,1.14.1)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2020-01-14 18:15:26.649
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-01-14 18:15:26.649
+!MESSAGE From: m2e logback appender 1.14.0.20191209-1925 (org.eclipse.m2e.logback.appender 1.14.0.20191209-1925)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-01-14 18:15:26.649
+!MESSAGE To: bundle org.eclipse.m2e.core.ui [1.13.0,1.14.1)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2020-01-14 18:15:26.649
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-01-14 18:15:26.649
+!MESSAGE From: m2e - slf4j over logback logging (Optional) 1.14.0.20191209-1925 (org.eclipse.m2e.logback.feature.feature.group 1.14.0.20191209-1925)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-01-14 18:15:26.649
+!MESSAGE To: org.eclipse.m2e.logback.appender [1.14.0.20191209-1925]
+
+!ENTRY org.eclipse.equinox.p2.operations 4 10053 2020-01-14 18:15:26.681
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 1 10001 2020-01-14 18:15:26.681
+!MESSAGE Your original request has been modified.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2020-01-14 18:15:26.681
+!MESSAGE "m2e - slf4j over logback logging (Optional)" is already installed, so an update will be performed instead.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2020-01-14 18:15:26.681
+!MESSAGE "m2e - Maven Integration for Eclipse (includes Incubating components)" is already installed, so an update will be performed instead.
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10053 2020-01-14 18:15:26.681
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2020-01-14 18:15:26.681
+!MESSAGE Software being installed: m2e - slf4j over logback logging (Optional) 1.14.0.20191209-1925 (org.eclipse.m2e.logback.feature.feature.group 1.14.0.20191209-1925)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2020-01-14 18:15:26.681
+!MESSAGE Missing requirement: Maven Integration for Eclipse 1.13.0.20190716-1624 (org.eclipse.m2e.core 1.13.0.20190716-1624) requires 'bundle com.google.guava [27.1.0,28.0.0)' but it could not be found
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2020-01-14 18:15:26.681
+!MESSAGE Missing requirement: Maven Integration for Eclipse 1.14.0.20191209-1925 (org.eclipse.m2e.core 1.14.0.20191209-1925) requires 'bundle com.google.guava [27.1.0,28.0.0)' but it could not be found
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2020-01-14 18:15:26.681
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-01-14 18:15:26.681
+!MESSAGE From: Maven Integration for Eclipse 1.13.0.20190716-1624 (org.eclipse.m2e.core.ui 1.13.0.20190716-1624)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-01-14 18:15:26.681
+!MESSAGE To: bundle org.eclipse.m2e.core [1.13.0,1.14.0)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2020-01-14 18:15:26.681
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-01-14 18:15:26.681
+!MESSAGE From: Maven Integration for Eclipse 1.14.0.20191209-1925 (org.eclipse.m2e.core.ui 1.14.0.20191209-1925)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-01-14 18:15:26.681
+!MESSAGE To: bundle org.eclipse.m2e.core [1.13.0,1.14.1)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2020-01-14 18:15:26.681
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-01-14 18:15:26.681
+!MESSAGE From: m2e logback appender 1.14.0.20191209-1925 (org.eclipse.m2e.logback.appender 1.14.0.20191209-1925)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-01-14 18:15:26.681
+!MESSAGE To: bundle org.eclipse.m2e.core.ui [1.13.0,1.14.1)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2020-01-14 18:15:26.681
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-01-14 18:15:26.681
+!MESSAGE From: m2e - slf4j over logback logging (Optional) 1.14.0.20191209-1925 (org.eclipse.m2e.logback.feature.feature.group 1.14.0.20191209-1925)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-01-14 18:15:26.681
+!MESSAGE To: org.eclipse.m2e.logback.appender [1.14.0.20191209-1925]
+
+!ENTRY org.eclipse.equinox.p2.operations 4 10053 2020-01-14 18:15:26.690
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 1 10001 2020-01-14 18:15:26.690
+!MESSAGE Your original request has been modified.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2020-01-14 18:15:26.690
+!MESSAGE "m2e - slf4j over logback logging (Optional)" is already installed, so an update will be performed instead.
+!SUBENTRY 2 org.eclipse.equinox.p2.operations 1 10003 2020-01-14 18:15:26.690
+!MESSAGE "m2e - Maven Integration for Eclipse (includes Incubating components)" is already installed, so an update will be performed instead.
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10053 2020-01-14 18:15:26.690
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2020-01-14 18:15:26.690
+!MESSAGE Software being installed: m2e - slf4j over logback logging (Optional) 1.14.0.20191209-1925 (org.eclipse.m2e.logback.feature.feature.group 1.14.0.20191209-1925)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2020-01-14 18:15:26.690
+!MESSAGE Missing requirement: Maven Integration for Eclipse 1.13.0.20190716-1624 (org.eclipse.m2e.core 1.13.0.20190716-1624) requires 'bundle com.google.guava [27.1.0,28.0.0)' but it could not be found
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2020-01-14 18:15:26.690
+!MESSAGE Missing requirement: Maven Integration for Eclipse 1.14.0.20191209-1925 (org.eclipse.m2e.core 1.14.0.20191209-1925) requires 'bundle com.google.guava [27.1.0,28.0.0)' but it could not be found
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2020-01-14 18:15:26.690
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-01-14 18:15:26.690
+!MESSAGE From: Maven Integration for Eclipse 1.13.0.20190716-1624 (org.eclipse.m2e.core.ui 1.13.0.20190716-1624)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-01-14 18:15:26.690
+!MESSAGE To: bundle org.eclipse.m2e.core [1.13.0,1.14.0)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2020-01-14 18:15:26.690
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-01-14 18:15:26.690
+!MESSAGE From: Maven Integration for Eclipse 1.14.0.20191209-1925 (org.eclipse.m2e.core.ui 1.14.0.20191209-1925)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-01-14 18:15:26.690
+!MESSAGE To: bundle org.eclipse.m2e.core [1.13.0,1.14.1)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2020-01-14 18:15:26.690
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-01-14 18:15:26.690
+!MESSAGE From: m2e logback appender 1.14.0.20191209-1925 (org.eclipse.m2e.logback.appender 1.14.0.20191209-1925)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-01-14 18:15:26.690
+!MESSAGE To: bundle org.eclipse.m2e.core.ui [1.13.0,1.14.1)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2020-01-14 18:15:26.690
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-01-14 18:15:26.690
+!MESSAGE From: m2e - slf4j over logback logging (Optional) 1.14.0.20191209-1925 (org.eclipse.m2e.logback.feature.feature.group 1.14.0.20191209-1925)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2020-01-14 18:15:26.690
+!MESSAGE To: org.eclipse.m2e.logback.appender [1.14.0.20191209-1925]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2020-01-15 14:22:58.891
+!MESSAGE Internal Error
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/TestContentSquare/src/testStep/TestSteps.java' does not exist.
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:335)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:209)
+	at org.eclipse.core.internal.resources.Resource.findMaxProblemSeverity(Resource.java:1018)
+	at org.eclipse.jdt.ui.ProblemsLabelDecorator.getPackageErrorTicksFromMarkers(ProblemsLabelDecorator.java:336)
+	at org.eclipse.jdt.ui.ProblemsLabelDecorator.computeAdornmentFlags(ProblemsLabelDecorator.java:209)
+	at org.eclipse.jdt.internal.ui.viewsupport.TreeHierarchyLayoutProblemsDecorator.computePackageAdornmentFlags(TreeHierarchyLayoutProblemsDecorator.java:47)
+	at org.eclipse.jdt.internal.ui.viewsupport.TreeHierarchyLayoutProblemsDecorator.computeAdornmentFlags(TreeHierarchyLayoutProblemsDecorator.java:53)
+	at org.eclipse.jdt.internal.ui.packageview.PackageExplorerProblemsDecorator.computeAdornmentFlags(PackageExplorerProblemsDecorator.java:35)
+	at org.eclipse.jdt.ui.ProblemsLabelDecorator.decorateImage(ProblemsLabelDecorator.java:167)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaUILabelProvider.decorateImage(JavaUILabelProvider.java:134)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaUILabelProvider.getImage(JavaUILabelProvider.java:147)
+	at org.eclipse.jdt.internal.ui.packageview.PackageExplorerLabelProvider.getImage(PackageExplorerLabelProvider.java:137)
+	at org.eclipse.jface.viewers.DelegatingStyledCellLabelProvider.getImage(DelegatingStyledCellLabelProvider.java:195)
+	at org.eclipse.jface.viewers.DecoratingStyledCellLabelProvider.getImage(DecoratingStyledCellLabelProvider.java:168)
+	at org.eclipse.jface.viewers.DelegatingStyledCellLabelProvider.update(DelegatingStyledCellLabelProvider.java:121)
+	at org.eclipse.jface.viewers.DecoratingStyledCellLabelProvider.update(DecoratingStyledCellLabelProvider.java:131)
+	at org.eclipse.jface.viewers.ViewerColumn.refresh(ViewerColumn.java:141)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.doUpdateItem(AbstractTreeViewer.java:949)
+	at org.eclipse.jface.viewers.AbstractTreeViewer$UpdateItemSafeRunnable.run(AbstractTreeViewer.java:118)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.JFaceUtil$1.run(JFaceUtil.java:50)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:173)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.doUpdateItem(AbstractTreeViewer.java:1029)
+	at org.eclipse.jface.viewers.StructuredViewer$UpdateItemSafeRunnable.run(StructuredViewer.java:474)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.JFaceUtil$1.run(JFaceUtil.java:50)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:173)
+	at org.eclipse.jface.viewers.StructuredViewer.updateItem(StructuredViewer.java:2170)
+	at org.eclipse.jface.viewers.StructuredViewer.internalUpdate(StructuredViewer.java:2153)
+	at org.eclipse.jface.viewers.StructuredViewer.update(StructuredViewer.java:2094)
+	at org.eclipse.jface.viewers.ColumnViewer.update(ColumnViewer.java:542)
+	at org.eclipse.jface.viewers.StructuredViewer.update(StructuredViewer.java:2038)
+	at org.eclipse.jface.viewers.StructuredViewer.handleLabelProviderChanged(StructuredViewer.java:1209)
+	at org.eclipse.jdt.internal.ui.viewsupport.ProblemTreeViewer.handleLabelProviderChanged(ProblemTreeViewer.java:206)
+	at org.eclipse.jface.viewers.ContentViewer$1.labelProviderChanged(ContentViewer.java:99)
+	at org.eclipse.jface.viewers.BaseLabelProvider$1.run(BaseLabelProvider.java:72)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.JFaceUtil$1.run(JFaceUtil.java:50)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:173)
+	at org.eclipse.jface.viewers.BaseLabelProvider.fireLabelProviderChanged(BaseLabelProvider.java:69)
+	at org.eclipse.jface.viewers.DecoratingStyledCellLabelProvider.lambda$0(DecoratingStyledCellLabelProvider.java:75)
+	at org.eclipse.ui.internal.decorators.DecoratorManager$1.run(DecoratorManager.java:374)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.decorators.DecoratorManager.fireListener(DecoratorManager.java:371)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$3.runInUIThread(DecorationScheduler.java:511)
+	at org.eclipse.ui.progress.UIJob$1.run(UIJob.java:97)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:182)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4211)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3827)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1121)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1022)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:150)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:693)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:610)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:138)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:673)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:610)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1519)
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2020-01-15 14:22:59.077
+!MESSAGE Resource '/TestContentSquare/src/testStep/TestSteps.java' does not exist.

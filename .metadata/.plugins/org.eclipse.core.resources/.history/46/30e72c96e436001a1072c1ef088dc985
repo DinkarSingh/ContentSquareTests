@@ -1,0 +1,19 @@
+package Tests;
+
+import org.openqa.selenium.WebDriver;
+//import org.openqa.selenium.firefox.FirefoxDriver;
+//import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Loginpage {
+	
+	public static void main(String[] args) {
+		
+		//String  projectLocation = System.getProperties("user.dir");
+		System.setProperty("webdriver.gecko.driver", "D:\ContentSquare\TestContentSquare\lib\firefoxdriver\geckodriver.exe");
+		WebDriver driver = new FirefoxDriver();
+		driver.get("https://www.google.com/");
+		driver.quit();
+		
+	}
+
+}

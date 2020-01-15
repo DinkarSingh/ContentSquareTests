@@ -1,0 +1,68 @@
+package page;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
+public class LoginPage {
+	WebDriver driver;
+
+	@FindBy(id = "email")
+	private WebElement emailTxtBox;
+
+	@FindBy(id = "passwd")
+	private WebElement passwordTxtBox;
+
+	@FindBy(id = "SubmitLogin")
+	private WebElement signInButton;
+	
+	@FindBy(id = "email_create")
+	private WebElement emailCreateTxtBox;
+	
+	@FindBy(id = "SubmitCreate")
+	private WebElement createAccountButton;
+
+	public LoginPage(WebDriver driver){
+
+		this.driver = driver;
+
+		//This initElements method will create all WebElements
+
+		PageFactory.initElements(driver, this);
+	}
+
+	public boolean validateURL(String expURL){
+		boolean result = false;
+		if(driver.getCurrentUrl().equalsIgnoreCase(expURL)){
+			result = true;
+		}
+		return result;
+	}
+
+	public void insertLoginValue(String userID, String PWD){
+
+		emailTxtBox.sendKeys(userID);
+		passwordTxtBox.sendKeys(PWD);
+		signInButton.click();
+	}
+	
+	public void insertUserIDValue(String userID){
+		emailTxtBox.sendKeys(userID);
+	}
+	
+	public void VerifyToolTip(){
+		Actions action = new Actions(driver);
+		action.moveToElement(emailTxtBox).build().perform();
+		WebElement toolTipElement = driver.findElement(By.id("email"));
+		String toolTipTxt = toolTipElement.getText();
+		System.out.println(toolTipTxt);
+	}
+
+	public void RegistrationPage(String emailID){
+		emailCreateTxtBox.sendKeys(emailID);
+		createAccountButton.click();
+		
+	}
+
+}

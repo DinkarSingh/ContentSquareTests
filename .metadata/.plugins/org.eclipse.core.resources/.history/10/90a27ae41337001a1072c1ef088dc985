@@ -1,0 +1,53 @@
+package testStep;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.PageFactory;
+import page.HomePage;
+
+public class TestSteps {
+
+	static String browser;
+	static WebDriver driver;
+	HomePage objHomepage;
+
+	public static void main(String[] args) {
+		setBrowser();
+		setBrowserConfig();
+		RunTests();
+
+	}
+
+	public static void setBrowser(){
+		browser = "Chrome";
+
+	}
+
+	public static void setBrowserConfig(){
+		String projectLocation = System.getProperty("user.dir");
+
+		if(browser.contains("Firefox")){
+			System.setProperty("webdriver.gecko.driver","D:\\ContentSquare\\TestContentSquare\\lib\\firefoxdriver\\geckodriver.exe");
+			System.setProperty("webdriver.firefox.bin", "C:\\Program Files (x86)\\Mozilla Firefox");
+			driver = new FirefoxDriver();
+		}
+		if(browser.contains("Chrome")){
+			System.setProperty("webdriver.chrome.driver", projectLocation+"\\lib\\chromedriver\\chromedriver.exe");
+			driver = new ChromeDriver();
+		}
+
+	}
+
+	public static void RunTests(){
+		driver.get("https://marksandspicy.com/");
+		driver.quit();
+
+	}
+	
+	public static void Homepagedisplay(){
+		objHomepage = new HomePage(driver);
+		String HPage = objHomepage.ClickOnSignInButtn();
+	}
+
+}
+

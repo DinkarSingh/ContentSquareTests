@@ -1,0 +1,105 @@
+package page;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
+
+public class RegistrationPage {
+	WebDriver driver;
+
+	@FindBy(id = "email")
+	private WebElement emailTxtBox;
+
+	@FindBy(id = "password")
+	private WebElement passwordTxtBox;
+
+	@FindBy(id = "password2")
+	private WebElement confirmPwdTxtBox;
+
+	@FindBy(xpath = "//*[@id='TunnelDeCommande']/div[3]/div[1]/div[5]/div[1]/div/span[3]/label[1]")
+	private WebElement salutationTxtBox;
+
+	@FindBy(id = "nom")
+	private WebElement nomTxtBox;
+
+	@FindBy(id = "prenom")
+	private WebElement prenomTxtBox;
+
+	@FindBy(id = "dateJour")
+	private WebElement dateTxtBox;
+
+	@FindBy(id = "dateMois")
+	private WebElement monthTxtBox;
+
+	@FindBy(id = "dateAnnee")
+	private WebElement yearTxtBox;
+
+	@FindBy(id = "adresse")
+	private WebElement addressTxtBox;
+
+	@FindBy(id = "codePostal")
+	private WebElement postalcodeTxtBox;
+
+	@FindBy(id = "ville")
+	private WebElement cityTxtBox;
+
+	@FindBy(id = "telephonePortable")
+	private WebElement telephoneTxtBox;
+
+	@FindBy(id = "telephoneFixe")
+	private WebElement phonenumberTxtBox; 
+
+	@FindBy(id = "BtnCreationSubmit")
+	private WebElement submintbutton;
+
+	public RegistrationPage(WebDriver driver){
+
+		this.driver = driver;
+
+		//This initElements method will create all WebElements
+
+		PageFactory.initElements(driver, this);
+	}
+
+	public boolean validateURL(String expURL){
+		boolean result = false;
+		if(driver.getCurrentUrl().equalsIgnoreCase(expURL)){
+			result = true;
+		}
+		return result;
+	}
+
+	public boolean fillRegitrationPage(String email, String password, String password2, String salutation,String nom,String prenom, String birthDate, String birthMonth, String birthyear, String address, String pincode, String telephone, String fixphone){
+		boolean result = true;
+		emailTxtBox.sendKeys(email);
+		passwordTxtBox.sendKeys(password);
+		confirmPwdTxtBox.sendKeys(password2);
+		//verfify salutation
+		salutationTxtBox.click(); 
+		nomTxtBox.sendKeys(nom);
+		prenomTxtBox.sendKeys(prenom);
+		String dateofBirth = birthDate;
+		String date = dateofBirth.substring(0,2);
+		String month = dateofBirth.substring(3,6);
+		String year = dateofBirth.substring(7,11);
+		dateTxtBox.sendKeys(date);
+		monthTxtBox.sendKeys(month);
+		yearTxtBox.sendKeys(year);
+		addressTxtBox.sendKeys(address);
+		postalcodeTxtBox.sendKeys(pincode);
+		telephoneTxtBox.sendKeys(telephone);
+		phonenumberTxtBox.sendKeys(fixphone);
+		return result;
+	}
+
+	public void ClickOnRegistrationButton(){
+		submintbutton.click();
+	}
+	
+	public String VerifyVilleTextBox(){
+		return cityTxtBox.getAttribute("value");
+	}
+
+}

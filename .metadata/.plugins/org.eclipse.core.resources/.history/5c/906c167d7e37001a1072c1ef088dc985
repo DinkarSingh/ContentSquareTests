@@ -1,0 +1,134 @@
+package testStep;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.PageFactory;
+
+import junit.framework.Assert;
+
+import static org.junit.Assert.assertEquals;				
+import static org.junit.Assert.assertFalse;				
+
+import java.util.ArrayList;		
+
+import org.junit.After;		
+import org.junit.AfterClass;		
+import org.junit.Before;		
+import org.junit.BeforeClass;		
+import org.junit.Ignore;		
+import org.junit.Test;		
+
+import page.HomePage;
+import page.LoginPage;
+import page.RegistrationPage;
+
+@SuppressWarnings("deprecation")
+public class StepHomePage {
+
+	static String browser;
+	static WebDriver driver;
+	static HomePage objHomepage;
+	static LoginPage objLoginpage;
+	static RegistrationPage objRegistration;
+	boolean result;
+
+	/*public static void main(String[] args) {
+		setBrowser();
+		setBrowserConfig();
+		RunTests();
+		Homepagedisplay();
+
+	}*/
+
+	public static void setBrowser(){
+		browser = "Chrome";
+
+	}
+
+	public static void setBrowserConfig(){
+		String projectLocation = System.getProperty("user.dir");
+
+		if(browser.contains("Firefox")){
+			System.setProperty("webdriver.gecko.driver","D:\\ContentSquare\\TestContentSquare\\lib\\firefoxdriver\\geckodriver.exe");
+			System.setProperty("webdriver.firefox.bin", "C:\\Program Files (x86)\\Mozilla Firefox");
+			driver = new FirefoxDriver();
+		}
+		if(browser.contains("Chrome")){
+			System.setProperty("webdriver.chrome.driver", projectLocation+"\\lib\\chromedriver\\chromedriver.exe");
+			driver = new ChromeDriver();
+		}
+
+	}
+
+	public static void OpenBrowserULR(){
+		driver.get("https://marksandspicy.com/");
+		driver.manage().window().maximize();
+
+	}
+	
+	@Before
+	public void setup(){
+		setBrowser();
+		setBrowserConfig();
+		OpenBrowserULR();
+		
+	}
+	
+	@Test
+	public void FirstTestCase(){
+		objHomepage = new HomePage(driver);
+		objHomepage.ClickOnSignInButtn();
+		objLoginpage = new LoginPage(driver);
+		result =objLoginpage.validateURL("https://marksandspicy.com/login_back=my-account.html");
+		Assert.assertTrue(result);
+		objLoginpage.insertLoginValue("test@test.com","ThisIs@T3st");
+		//Unsuccessfull login verification
+		result =objLoginpage.validateURL("https://marksandspicy.com/login.html");
+		Assert.assertTrue(result);
+	}
+	
+	/*@Test
+	public void SecondTestCase(){
+		objHomepage = new HomePage(driver);
+		objHomepage.ClickOnSignInButtn();
+		objLoginpage = new LoginPage(driver);
+		result =objLoginpage.validateURL("https://marksandspicy.com/login_back=my-account.html");
+		Assert.assertTrue(result);
+		objLoginpage.insertUserIDValue("test");
+		objLoginpage.VerifyToolTip();
+		
+	}*/
+	
+	/*@Test
+	public void ThirsTestCase(){
+		objHomepage = new HomePage(driver);
+		objHomepage.ClickOnSignInButtn();
+		objLoginpage = new LoginPage(driver);
+		result =objLoginpage.validateURL("https://marksandspicy.com/login_back=my-account.html");
+		Assert.assertTrue(result);
+		objLoginpage.insertLoginValue("","");
+		
+	}*/
+	
+	@Test
+	public void FouthTestCase(){
+		objHomepage = new HomePage(driver);
+		objHomepage.ClickOnSignInButtn();
+		objLoginpage = new LoginPage(driver);
+		result =objLoginpage.validateURL("https://marksandspicy.com/login_back=my-account.html");
+		Assert.assertTrue(result);
+		objLoginpage.RegistrationPage("mailmedinkar@yahoo.co.in");
+		result =objLoginpage.validateURL("https://marksandspicy.com/create-account.html");
+		objRegistration = new RegistrationPage(driver);
+		boolean s = objRegistration.fillRegitrationPage("mailmedinkar@yahoo.co.in", "03Dinkar", "03Dinkar", "Mr", "Singh", "Dinkar", "03/08/1989","1 bis Geroges clemenceu", "94700", "0629254828", "0629254828");
+		String ville = objRegistration.VerifyVilleTextBox();
+		Assert.assertTrue(ville.contains(""));
+	}
+	
+	@After
+	public void close(){
+		driver.quit();
+	}
+
+}
